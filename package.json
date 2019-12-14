@@ -2,12 +2,12 @@
   "name": "dark-fns",
   "version": "1.0.0",
   "description": "",
-  "main": "example.js",
+  "main": "index.js",
   "scripts": {
     "start": "npm run dev",
     "build": "rollup --config rollup.config.prod.js",
     "dev": "rollup --config rollup.config.dev.js --watch",
-    "publish": "npm publish --registry http://registry.npmjs.org",
+    "publish": "npm --registry http://registry.npmjs.org publish",
     "test": "jest --no-cache"
   },
   "repository": {

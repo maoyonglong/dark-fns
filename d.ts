@@ -1,1 +1,0 @@
-declare function concatFn (...fns: Function[]): Function

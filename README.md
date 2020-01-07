@@ -8,7 +8,9 @@ console.log(darkFns)
 // {
 //   assert,
 //   fns,
-//   object
+//   object,
+//   array,
+//   ...
 // }
 ```
 
@@ -96,3 +98,5 @@ function concatFn (...fns: Function[]): Function
  */
 function curry (fn: Function): Function
 ```
+
+[More Information](https://maoyonglong.github.io/dark-fns)

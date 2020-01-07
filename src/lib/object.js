@@ -1,3 +1,6 @@
+/**
+ * @module darkFns/object
+ */
 import {
   isUnDef,
   isStrictObj,
@@ -10,6 +13,7 @@ import { concatFn } from './function'
 
 /**
  * get strict object's value by path
+ * @method
  * @param { object } obj strict object (json-like)
  * @param { string } path the key path like `a.b.c`, if the path is an empty string, return obj itself
  * @param { * } defaultVal if the path exists and the value is undefined, will return defaultVal
@@ -33,6 +37,7 @@ export function getValByKeyPath (obj, path, defaultVal) {
 
 /**
  * set strict object's value by path
+ * @method
  * @param { object } obj strict object (json-like)
  * @param { string } path the key path like `a.b.c`
  * @param { * } defaultVal if the path exists and the value is undefined, will return defaultVal
@@ -49,6 +54,7 @@ export function setValByKeyPath (obj, val, path) {
 
 /**
  * mixin strict object
+ * @method
  * if isConcatFn is true, concat function
  * if isConcatArr is true, concat array
  * @param { object } target 

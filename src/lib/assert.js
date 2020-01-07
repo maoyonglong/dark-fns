@@ -1,3 +1,7 @@
+/**
+ * @module darkFns/assert
+ */
+
 function genTypeofFn (type) {
   return function (target) {
     return typeof target === type
@@ -15,6 +19,7 @@ function genCbIsEqualFn (cb, value) {
 }
 /**
  * assert function type
+ * @method
  * @param { * } target
  * @return { boolean } return `typeof(target) === 'function'`
  * @example
@@ -24,6 +29,7 @@ function genCbIsEqualFn (cb, value) {
 export var isFn = genTypeofFn('function')
 /**
  * assert object type
+ * @method
  * @param { * } target
  * @return { boolean } return `typeof(target) === 'object'`
  * @example
@@ -34,6 +40,7 @@ export var isFn = genTypeofFn('function')
 export var isObj = genTypeofFn('object')
 /**
  * assert undefined type
+ * @method
  * @param { * } target
  * @return { boolean } return `typeof(target) === 'undefined'`
  * @example
@@ -44,6 +51,7 @@ export var isObj = genTypeofFn('object')
 export var isUnDef = genTypeofFn('undefined')
 /**
  * assert number type
+ * @method
  * @param { * } target
  * @return { boolean } return `typeof(target) === 'number'`
  * @example
@@ -52,6 +60,7 @@ export var isUnDef = genTypeofFn('undefined')
 export var isNumber = genTypeofFn('number')
 /**
  * assert string type
+ * @method
  * @param { * } target
  * @return { boolean } return `typeof(target) === 'string'`
  * @example
@@ -60,6 +69,7 @@ export var isNumber = genTypeofFn('number')
 export var isString = genTypeofFn('string')
 /**
  * assert null
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is null
  * @example
@@ -68,6 +78,7 @@ export var isString = genTypeofFn('string')
 export var isNull = genIsEqualFn(null)
 /**
  * assert number zero
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is zero
  * @example
@@ -76,6 +87,7 @@ export var isNull = genIsEqualFn(null)
 export var isZero = genIsEqualFn(0)
 /**
  * assert false
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is false
  * @example
@@ -85,6 +97,7 @@ export var isZero = genIsEqualFn(0)
 export var isFalse = genIsEqualFn(false)
 /**
  * assert true
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is true
  * @example
@@ -94,6 +107,7 @@ export var isFalse = genIsEqualFn(false)
 export var isTrue = genIsEqualFn(true)
 /**
  * assert is an empty string
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is an empty string
  * @example
@@ -104,6 +118,7 @@ export var isTrue = genIsEqualFn(true)
 export var isEmptyString = genIsEqualFn('')
 /**
  * assert is an empty array
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is an empty array
  * @example
@@ -114,6 +129,7 @@ export var isEmptyString = genIsEqualFn('')
 export var isEmptyArray = genCbIsEqualFn(JSON.stringify, '[]')
 /**
  * assert is an empty object
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is an empty object
  * @example
@@ -124,6 +140,7 @@ export var isEmptyArray = genCbIsEqualFn(JSON.stringify, '[]')
 export var isEmptyObj = genCbIsEqualFn(JSON.stringify, '{}')
 /**
  * assert is array
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is an array
  * @example
@@ -136,6 +153,7 @@ export function isArray (target) {
 }
 /**
  * assert is an strict object (json-like)
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is an strict object
  * @example
@@ -147,6 +165,7 @@ export function isStrictObj (target) {
 }
 /**
  * assert is an empty string, empty array or empty object
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is an strict object
  * @example
@@ -159,6 +178,7 @@ export function isEmpty (target) {
 }
 /**
  * assert is falsy
+ * @method
  * @param { * } target
  * @return { boolean } return `true` if the target is [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
  * @example
@@ -171,6 +191,7 @@ export function isFalsy (target) {
 }
 /**
  * assert is an instance of Class
+ * @method
  * @param { * } target 
  * @param { * } Class a class
  * @return { boolean } return `target instanceof Class`
